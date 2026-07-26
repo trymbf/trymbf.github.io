@@ -1,154 +1,211 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link href="./output.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>tbf3d:projects</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      /* Custom CSS to subtract the navbar height */
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link href="./output.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>trymbf.github.io:projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Custom CSS to subtract the navbar height */
+    .card {
+      min-height: calc(70vh);
+      width: calc(100vw - 7rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
       .card {
-        min-height: calc(70vh);
-        width: calc(100vw - 7rem);
-        position: relative;
-        overflow: hidden;
+        width: 100vw;
       }
+    }
 
-      @media (max-width: 768px) {
-        .card {
-          width: 100vw;
-        }
-      }
-      
-      .video-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen bg-gray-900 text-white flex flex-col">
-    <nav class="flex h-16 justify-between md:p-5">
-      <div class="none md:block"></div>
-      <h3 class="p-4 text-2xl md:static fixed md:text-3xl bg-gray-900 w-full md:bg-transparent font-bold md:font-normal" id="pathTitle">
-        <a href="/#" class="hover:underline">tbf3d.com</a>/<a href="/projects" class="text-green-300 hover:underline">projects</a>
-      </h3>
-      <div class="flex justify-between md:space-x-4 flex-row md:flex-row my-[3.5rem] w-full px-3.5 md:m-0 md:w-auto">
-        <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a href="/projects">projects</a></h3>
-        <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a href="/experience">experience</a></h3>
-        <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a href="/contact">contact</a></h3>
-      </div>
-    </nav>
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+</head>
 
-    <div>
-      <div id="duoaddons" class="card bg-gray-700 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
-        <img src="../assets/imgs/duoaddons.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
-        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
-          <h1 class="text-4xl md:text-6xl font-thin">DUOADDONS</h1>
-          <h4 class="">Create custom Duolingo leagues to compete with friends.</h4>
-        </div>
-        <div></div>
-        <p class="col-span-1 md:col-span-2">Duoaddons is an app that makes the Duolingo experience a whole lot more social. Create leagues, compete with and stalk your friends.</p>
-        <div class="col-span-1 md:col-span-2"></div>
-        <a href="" class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.apk)</a>
-      </div>
-
-      <div id="balancing_bros" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
-        <video autoplay muted loop class="video-bg">
-          <source src="../assets/video/bb.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <img src="../assets/imgs/bb.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
-        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
-          <h1 class="text-4xl md:text-6xl font-thin">BALANCING BROS</h1>
-          <h4 class="">My own LAN multiplayer game to play with friends.</h4>
-        </div>
-        <div></div>
-        <p class="col-span-1 md:col-span-2">Balancing Bros is a LAN multiplayer game entirely written in Python. It uses pyMunk for Physics, PyGame for visuals and PyGameUI for the UI.
-          You play as a ball trying to balance on a rotating platform. The last ball standing wins. The controls are really simple: roll right, roll left and jump. These easy controls make
-          it easy to pick up and produce lots of fun!</p>
-        <div class="col-span-1 md:col-span-2"></div>
-        <a href="https://drive.google.com/file/d/1J-9fg3ueviFDm_iL7CA6KuECxpBzvy9t/view" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.exe) <i class="fas fa-external-link-alt"></i></a>
-      </div>
-
-      <div id="ggb_dash" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
-        <video autoplay muted loop class="video-bg">
-          <source src="../assets/video/ggbdash.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <img src="../assets/imgs/geogebradash.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
-        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
-          <h1 class="text-4xl md:text-6xl font-thin">GEOGEBRA DASH</h1>
-          <h4 class="">GeoGebra has a surprising amount of functionality.</h4>
-        </div>
-        <div></div>
-        <p class="col-span-1 md:col-span-2">For some reason GeoGebra has a programming language built in, GeoGebraScript. When I realised this I saw an opportunity. 
-          It does not support keyboard inputs, but if you force focus on a slider, the right and left arrows become functional. 
-          GeoGebraScript also translates to the selected language which makes development a huge pain, as the GeoGebra app uses British English while the web version uses American.
-          Still, the game is quite fun, functional and addicting. </p>
-        <div class="col-span-1 md:col-span-2"></div>
-        <a href="https://www.geogebra.org/m/bcxs7jyp" target="_blank" class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Play GGB Dash! <i class="fas fa-external-link-alt"></i></a>
-      </div>
-
-      <div id="pygameui" class="card bg-gray-700 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
-        <video autoplay muted loop class="video-bg">
-          <source src="../assets/video/" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <img src="../assets/imgs/pygameui.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
-        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
-          <h1 class="text-4xl md:text-6xl font-thin">PYGAMEUI</h1>
-          <h4 class="">Create full PyGame GUIs in minutes.</h4>
-        </div>
-        <div></div>
-        <p class="col-span-1 md:col-span-2">PygameUI is a small Python library written in Python that makes it easier to create UI elements like buttons, texts, inputs,
-           and more when using the Python library PyGame. The library also supplies the user with many optional features for customising the UI elements.
-           If you are looking for a library that makes small projects and games a lot less of a headache, I would definitely recommend you give PyGameUI a try! </p>
-        <div class="col-span-1 md:col-span-2"></div>
-        <a href="https://trymbf.github.io/pygameui/" target="_blank" class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Documentation and links <i class="fas fa-external-link-alt"></i></a>
-      </div>
-
-      <div id="eszett" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
-        <video autoplay muted loop class="video-bg">
-          <source src="../assets/video/eszett.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <img src="../assets/imgs/eszett.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
-        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
-          <h1 class="text-4xl md:text-6xl font-thin">ESZETT HOTKEY</h1>
-          <h4 class="">I have no idea why this didn't already exist.</h4>
-        </div>
-        <div></div>
-        <p class="col-span-1 md:col-span-2">Many people need to utilise the German eszett (ß) letter, but without a numpad, there is no way to write it using the keyboard. 
-          Eszett hotkey is built in Flutter, providing a modern, easy to use UI. You can set your own key combination, start and stop the hotkey listener and make it run on startup.</p>
-        <div class="col-span-1 md:col-span-2"></div>
-        <a href="../games/EszettHotkeySetupv5.exe" download class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.exe)</a>
-      </div>
-
-      <div id="anydino" class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
-        <video autoplay muted loop class="video-bg">
-          <source src="../assets/video/anydino.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <img src="../assets/imgs/anydino.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />  
-        <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
-          <h1 class="text-4xl md:text-6xl font-thin">ANYDINO.GAME</h1>
-          <h4 class="">This one is just for fun tbh.</h4>
-        </div>
-        <div></div>
-        <p class="col-span-1 md:col-span-2">Wanna play Chrome dino game with any image?</p>
-        <div class="col-span-1 md:col-span-2"></div>
-        <a href="../games/AnyDino.Setup.exe" download class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download (.exe)</a>
-      </div>
+<body class="min-h-screen bg-gray-900 text-white flex flex-col">
+  <nav class="flex h-16 justify-between md:p-5">
+    <div class="none md:block"></div>
+    <h3 class="p-4 text-2xl md:static fixed md:text-3xl bg-gray-900 w-full md:bg-transparent font-bold md:font-normal"
+      id="pathTitle">
+      <a href="/#" class="hover:underline">trymbf.github.io</a>/<a href="/projects"
+        class="text-green-300 hover:underline">projects</a>
+    </h3>
+    <div class="flex justify-between md:space-x-4 flex-row md:flex-row my-[3.5rem] w-full px-3.5 md:m-0 md:w-auto">
+      <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a
+          href="/projects">projects</a></h3>
+      <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a
+          href="/experience">experience</a></h3>
+      <h3 class="p-2 text-xl md:p-4 md:text-3xl hover:underline z-50 underline md:no-underline"><a
+          href="/contact">contact</a></h3>
     </div>
-  </body>
+  </nav>
+
+  <div>
+    <div id="skapersok"
+      class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <video autoplay muted loop class="video-bg">
+        <source src="../assets/video/skapersok_qr_demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../assets/imgs/skapersok.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">SKAPERSOK</h1>
+        <h4 class="">Nobody searches in 2026.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">Skapersok is my latest project. It is an organization app for makerspaces,
+        hobbyists, and anyone with a lot of stuff.</p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href="https://skapersok.no" target="_blank"
+        class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Learn
+        more <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div id="duoaddons"
+      class="card bg-gray-700 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <img src="../assets/imgs/duoaddons.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">DUOADDONS</h1>
+        <h4 class="">Create custom Duolingo leagues to compete with friends.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">Duoaddons is an app that makes the Duolingo experience a whole lot more
+        social. Create leagues, compete with and stalk your friends.</p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href=""
+        class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download
+        (.apk)</a>
+    </div>
+
+    <div id="balancing_bros"
+      class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <video autoplay muted loop class="video-bg">
+        <source src="../assets/video/bb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../assets/imgs/bb.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">BALANCING BROS</h1>
+        <h4 class="">My own LAN multiplayer game to play with friends.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">Balancing Bros is a LAN multiplayer game entirely written in Python. It uses
+        pyMunk for Physics, PyGame for visuals and PyGameUI for the UI.
+        You play as a ball trying to balance on a rotating platform. The last ball standing wins. The controls are
+        really simple: roll right, roll left and jump. These easy controls make
+        it easy to pick up and produce lots of fun!</p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href="https://drive.google.com/file/d/1J-9fg3ueviFDm_iL7CA6KuECxpBzvy9t/view" target="_blank"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download
+        (.exe) <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div id="ggb_dash"
+      class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <video autoplay muted loop class="video-bg">
+        <source src="../assets/video/ggbdash.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../assets/imgs/geogebradash.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">GEOGEBRA DASH</h1>
+        <h4 class="">GeoGebra has a surprising amount of functionality.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">For some reason GeoGebra has a programming language built in, GeoGebraScript.
+        When I realised this I saw an opportunity.
+        It does not support keyboard inputs, but if you force focus on a slider, the right and left arrows become
+        functional.
+        GeoGebraScript also translates to the selected language which makes development a huge pain, as the GeoGebra app
+        uses British English while the web version uses American.
+        Still, the game is quite fun, functional and addicting. </p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href="https://www.geogebra.org/m/bcxs7jyp" target="_blank"
+        class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Play
+        GGB Dash! <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div id="pygameui"
+      class="card bg-gray-700 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <video autoplay muted loop class="video-bg">
+        <source src="../assets/video/" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../assets/imgs/pygameui.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">PYGAMEUI</h1>
+        <h4 class="">Create full PyGame GUIs in minutes.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">PygameUI is a small Python library written in Python that makes it easier to
+        create UI elements like buttons, texts, inputs,
+        and more when using the Python library PyGame. The library also supplies the user with many optional features
+        for customising the UI elements.
+        If you are looking for a library that makes small projects and games a lot less of a headache, I would
+        definitely recommend you give PyGameUI a try! </p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href="https://trymbf.github.io/pygameui/" target="_blank"
+        class="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Documentation
+        and links <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div id="eszett"
+      class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <video autoplay muted loop class="video-bg">
+        <source src="../assets/video/eszett.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../assets/imgs/eszett.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">ESZETT HOTKEY</h1>
+        <h4 class="">I have no idea why this didn't already exist.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">Many people need to utilise the German eszett (ß) letter, but without a
+        numpad, there is no way to write it using the keyboard.
+        Eszett hotkey is built in Flutter, providing a modern, easy to use UI. You can set your own key combination,
+        start and stop the hotkey listener and make it run on startup.</p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href="../games/EszettHotkeySetupv5.exe" download
+        class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download
+        (.exe)</a>
+    </div>
+
+    <div id="anydino"
+      class="card bg-gray-700 bg-opacity-90 p-4 md:p-10 my-10 grid grid-cols-1 md:grid-cols-[1fr_3fr_2fr] grid-rows-3 gap-4">
+      <video autoplay muted loop class="video-bg">
+        <source src="../assets/video/anydino.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../assets/imgs/anydino.png" alt="" class="rounded-2xl col-span-1 row-span-2 w-full" />
+      <div class="col-span-1 md:col-span-2 flex justify-start flex-col gap-4">
+        <h1 class="text-4xl md:text-6xl font-thin">ANYDINO.GAME</h1>
+        <h4 class="">This one is just for fun tbh.</h4>
+      </div>
+      <div></div>
+      <p class="col-span-1 md:col-span-2">Wanna play Chrome dino game with any image?</p>
+      <div class="col-span-1 md:col-span-2"></div>
+      <a href="../games/AnyDino.Setup.exe" download
+        class="bg-green-500 hover:bg-green-700 text-white py-3 px-8 rounded text-xl md:text-2xl col-span-1 row-span-1 text-center">Download
+        (.exe)</a>
+    </div>
+  </div>
+</body>
+
 </html>

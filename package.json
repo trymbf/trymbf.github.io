@@ -1,5 +1,5 @@
 {
-  "name": "tbf3d",
+  "name": "trymbf.github.io",
   "version": "1.0.0",
   "scripts": {
     "build": "npx tailwindcss build styles.css -o output.css"

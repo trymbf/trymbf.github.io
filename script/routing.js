@@ -5,10 +5,10 @@ function set_path(url) {
         url = "";
     }
 
-    path.innerHTML = '<a href="/#" class="hover:underline">tbf3d.com</a>/<a href="/' + url + '" class="text-green-300 hover:underline">' + url + '</a>'
+    path.innerHTML = '<a href="/#" class="hover:underline">trymbf.github.io</a>/<a href="/' + url + '" class="text-green-300 hover:underline">' + url + '</a>'
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
     let displayHeight = window.innerHeight;
     let scrollPercentage = scrollPosition / displayHeight;
